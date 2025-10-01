@@ -45,6 +45,13 @@
       text-align: center;
       overflow: hidden;
     }
+   .half-size {
+    width: 50%;       /* half size */
+    height: auto;     /* keeps correct proportions */
+    display: block;   /* ensures margin works */
+    margin: 0 auto;   /* centers the image */
+    }
+
     .particles-container {
       position: absolute;
       top: 0; left: 0;
@@ -99,23 +106,13 @@
       color: #e0e0e0;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
-    .project-card {
-      background-color: rgba(255, 255, 255, 0.05);
-      margin: 1rem auto;
-      padding: 1rem;
-      border-radius: 10px;
-      max-width: 600px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
-    .project-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-    }
-    .project-card img {
-      max-width: 100%;
-      border-radius: 10px;
-    }
+  .project-card {
+ background-color: rgba(255, 255, 255, 0.05); margin: 1rem auto; padding: 1rem; border-radius: 10px; max-width: 600px; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); } 
+
+.project-card:hover { transform: scale(1.05); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); } 
+
+.project-card img { max-width: 100%; border-radius: 10px; }
+ 
     .project-card h3 {
       margin-top: 0.5rem;
     }
@@ -156,6 +153,7 @@
       <nav>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
+        <a href="#cv">CV</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -183,31 +181,136 @@
     </div>
   </section>
 
-  <section id="projects">
-    <div class="particles-container"></div>
-    <div class="content">
-      <h2>Projects</h2>
-      <div class="project-card">
-        <h3>Biopsy Robotics</h3>
-        <p>Describe work at BEC, guidoo.</p>
-        <a href="">View Project</a>
+<section id="cv">
+  <div class="particles-container"></div>
+  <div class="content">
+    <h2>Curriculum Vitae</h2>
+    
+    <!-- Download CV Button -->
+    <p>
+      <a href="files/Anastasia_CV_2025.pdf" download target="_blank" rel="noopener" class="cv-download">
+        📄 Download My CV
+      </a>
+    </p>
+
+    <!-- Academic Achievements -->
+    <h3>Academic Highlights</h3>
+    <ul>
+      <li>📌 Ranked #2 in Master’s Program (High Distinction) </li>
+      <li>📌 5+ Years Industry Experience in Biomed </li>
+      <li>📌 Co-Founder & Love Creating Things </li>
+      <li>📌 Design Thinking & Prototyping are my thing</li>
+      <li>📌 Useing AI as a Catalyst, Not a Crutch </li>
+    </ul>
+  </div>
+</section>
+
+
+<section id="projects">
+  <div class="particles-container"></div>
+  <div class="content">
+    <h2>Projects</h2>
+
+ <!-- BaDGE -->
+    <div class="project-card">
+      <h3 class="project-title">BaDGE</h3>
+      <div class="project-info">
+        <p>
+         Prototyping and Optimisation for mass manufacturing
+        </p>
+        <img src="images/BaDGE.png" alt="BaDGE" class="half-size" />
+        <p>
+          <a href="https://www.unsw.edu.au/medicine-health/our-schools/biomedical-sciences/research-and-impact/research-themes/research-groups/badge" target="_blank" rel="noopener">
+            🔗 Visit UNSW BaDGE website
+          </a>
+        </p>
       </div>
-      <div class="project-card">
-        <h3>NeuroSales MIVI</h3>
-        <p>Preparing launch on German Market- MIVI Katheter.</p>
-        <a href="">View Project</a>
-      </div>
-      <div class="project-card">
-        <h3>WELLNTER</h3>
-        <p>AI in Mental Health.</p>
-        <a href="">View Project</a>
-      </div>
-      <div class="project-card">
-        <h3>Holographic Sensors</h3>
-        <p>Published a Paper.</p>
-        <a href="">View Project</a>
     </div>
-  </section>
+
+
+    <!-- Biopsy Robotics / Guidoo -->
+    <div class="project-card">
+      <h3 class="project-title">Biopsy Robotics – Guidoo</h3>
+      <div class="project-info">
+        <p>
+          Worked at BEC developing robotic guidance solutions for biopsy procedures.  
+          The Guidoo system integrates precision robotics with clinical needs.
+        </p>
+        <img src="images/guidoo.png" alt="Biopsy Robotics Guidoo" class="half-size" />
+        <p>
+          <a href="https://www.bec-robotics.com/en/medical/guidoo/" target="_blank" rel="noopener">
+            🔗 Visit Guidoo Website
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- NeuroSales MIVI -->
+    <div class="project-card">
+      <h3 class="project-title">NeuroSales MIVI</h3>
+      <div class="project-info">
+        <p>
+          Supported the German market launch of MIVI catheters for neurointervention,  
+          including clinical demonstrations and stakeholder engagement.
+        </p>
+        <img src="images/mivi.png" alt="NeuroSales MIVI" />
+        <p>
+          <a href="https://mivineuro.com/" target="_blank" rel="noopener">
+            🔗 Visit MIVI Website
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- WELLNTER -->
+    <div class="project-card">
+      <h3 class="project-title">WELLNTER</h3>
+      <div class="project-info">
+        <p>
+          AI applications in mental health for early intervention.  
+          This project explores how artificial intelligence can help detect early signs of mental health issues and provide support tools.
+        </p>
+        <img src="images/Wellnter.png" alt="WELLNTER" />
+        <p>
+          <a href="https://example.com/wellnter" target="_blank" rel="noopener">
+            🔗 Visit WELLNTER Website
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Holographic Sensors -->
+    <div class="project-card">
+      <h3 class="project-title">Holographic Sensors</h3>
+      <div class="project-info">
+        <p>
+          Co-authored a research paper on holographic sensor design,  
+          advancing biomedical applications in diagnostics.
+        </p>
+        <img src="images/Holo.png" alt="Holographic Sensors"  class="half-size" />
+        <p>
+          <a href="https://link.springer.com/article/10.1007/s44397-025-00016-y" target="_blank" rel="noopener">
+            🔗 Read Published Paper
+          </a>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  // Make project cards expandable
+  const projectTitles = document.querySelectorAll('.project-title');
+
+  projectTitles.forEach(title => {
+    title.style.cursor = 'pointer'; // indicate clickability
+    title.addEventListener('click', () => {
+      const card = title.parentElement;
+      card.classList.toggle('active');
+    });
+  });
+</script>
 
   <section id="contact">
     <div class="particles-container"></div>
